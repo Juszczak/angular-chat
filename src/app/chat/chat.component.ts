@@ -17,7 +17,7 @@ export class ChatComponent implements OnInit {
   constructor(private chatService: ChatService, private ngForageCache: NgForageCache) {}
 
   public async ngOnInit(): Promise<void> {
-    const initialMessages: ChatMessage[] = await this.ngForageCache.getItem('messages');
+    const initialMessages: ChatMessage[] = await this.ngForageCache.getItem('messages') ?? [];
 
     this.messages$ = this.chatService.message$.pipe(
       /* scan((messages: ChatMessage[], message: ChatMessage) => [...messages, message], []), */

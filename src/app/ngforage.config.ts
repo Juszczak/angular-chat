@@ -7,9 +7,9 @@ export const NGFORAGE_CONFIG_PROVIDER: ValueProvider = {
     cacheTime: 300000,
     description: 'Entries cached by ngforage',
     driver: [
-      Driver.LOCAL_STORAGE,
       Driver.INDEXED_DB,
-      Driver.WEB_SQL
+      Driver.WEB_SQL,
+      Driver.LOCAL_STORAGE,
     ],
     name: 'CDVNgForage',
     storeName: 'CDVNgForageExample'
