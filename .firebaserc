@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "cdv-angular-chat": {
+      "hosting": {
+        "angular-project": [
+          "cdv-angular-chat"
+        ]
+      }
+    }
+  }
+}
