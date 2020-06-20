@@ -5,6 +5,7 @@ import { scan, tap, startWith } from 'rxjs/operators';
 import { ChatMessage } from './chat-message.interface';
 import { NgForageCache } from 'ngforage';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-chat',
@@ -20,6 +21,7 @@ export class ChatComponent implements OnInit {
     private chatService: ChatService,
     private ngForageCache: NgForageCache,
     private fireAuth: AngularFireAuth,
+    private router: Router
   ) {}
 
   public async ngOnInit(): Promise<void> {
@@ -40,6 +42,10 @@ export class ChatComponent implements OnInit {
 
     this.fireAuth.user.subscribe((user: firebase.User) => {
       this.authorId = user?.email;
+
+      if (user === null) {
+        this.router.navigateByUrl('');
+      }
     });
   }
 
