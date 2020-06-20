@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
+import { Observable, Subscriber } from 'rxjs';
 import * as io from 'socket.io-client';
-import { Subject, Observable, Subscriber } from 'rxjs';
 import { ChatMessage } from './chat-message.interface';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ChatService {
   private static readonly SOCKET_URL = 'https://chat-server.fbg.pl';
