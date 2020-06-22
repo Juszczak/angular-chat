@@ -11,12 +11,7 @@ import { NGFORAGE_CONFIG_PROVIDER } from './ngforage.config';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, ChatComponent],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    AngularFireModule.initializeApp(environment.firebase),
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, AngularFireModule.initializeApp(environment.firebase)],
   providers: [NGFORAGE_CONFIG_PROVIDER],
   bootstrap: [AppComponent],
 })

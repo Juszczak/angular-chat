@@ -7,10 +7,17 @@
   "arrowParens": "always",
   "overrides": [
     {
+      "files": "*.ts",
+      "options": {
+        "printWidth": 140,
+        "parser": "typescript"
+      }
+    },
+    {
       "files": "*.js",
       "options": {
         "printWidth": 140,
-        "parser": "babel"
+        "parser": "typescript"
       }
     },
     {
@@ -22,9 +29,9 @@
       }
     },
     {
-      "files": "*.html",
+      "files": ".html",
       "options": {
-        "parser": "html",
+        "parser": "angular",
         "htmlWhitespaceSensitivity": "css"
       }
     }

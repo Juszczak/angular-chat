@@ -1,0 +1,13 @@
+/**
+ * Selektor :host pozwala na stylowanie elementu będącego selektorem komponentu.
+ * W tym przypadku jest to selektor `app-chat`.
+ */
+:host {
+  display: block;
+}
+
+.messages {
+  max-height: calc(100vh - 240px);
+  margin: 10px 0;
+  overflow-y: scroll;
+}

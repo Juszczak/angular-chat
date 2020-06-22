@@ -1,10 +1,11 @@
 <div class="messages">
   <div class="message" *ngFor="let message of messages$ | async">
-    <small>{{ message.authorId }}:</small> {{ message.text }}
+    <small>{{ message.timestamp | date:'medium' }} {{ message.authorId }}:</small> {{ message.text }}
   </div>
 </div>
 <div class="editor">
   <div>
+    <!-- Binding (keyup.enter) pozwala na nasłuchiwanie tylko na Eventy wciśnięcia przycisku Enter -->
     <textarea
       [(ngModel)]="messageText"
       (keyup.enter)="send()"
