@@ -1,32 +1,33 @@
-# AngularProject
+# CDV Angular Chat
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.1.
+Projekt jest forkiem startera dla projektów zaliczeniowych na kierunku Frontend Developer na Collegium Da Vindi.
 
-## Development server
+## Instalacja zależności
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```
+npm install
+```
 
-## Code scaffolding
+## Uruchomienie aplikacji w trybie deweloperskim
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```
+ng serve
+```
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Budowanie aplikacji w trybie produkcyjnym
 
-## Running unit tests
+```
+ng build --prod
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Wdrożenie aplikacji produkcyjnej na Hosting Firebase
 
-## Running end-to-end tests
+```
+ng deploy
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
-## Firebase Config
+## Pobranie konfiguracji aplikacji z Firebase
 
 ```
 firebase apps:sdkconfig
